@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>XILOFONO</title>
+</head>
+<body>
+    <audio id="notaDo" src="notas/DO.mp3"></audio>
+    <audio id="notaRe" src="notas/RE.mp3"></audio>
+    <audio id="notaMi" src="notas/MI.mp3"></audio>
+    <audio id="notaFa" src="notas/FA.mp3"></audio>
+    <audio id="notaSol" src="notas/SOL.mp3"></audio>
+    <audio id="notaLa" src="notas/LA.mp3"></audio>
+    <audio id="notaSi" src="notas/SI.mp3"></audio>
+    <audio id="notaDo2" src="notas/DO_2.mp3"></audio>
+    <div class="divOpciones">
+        <div>
+            DO: <input id="checkBoxDo" type="checkbox" checked="true" onclick="hiddeNota(this.id,'do')"/>
+        </div>
+        <div>
+            RE: <input  id="checkBoxRe" type="checkbox" checked="true" onclick="hiddeNota(this.id,'re')"/>
+        </div>
+        <div>
+            MI: <input  id="checkBoxMi" type="checkbox" checked="true" onclick="hiddeNota(this.id,'mi')"/>
+        </div>
+        <div>
+            FA: <input  id="checkBoxFa" type="checkbox" checked="true" onclick="hiddeNota(this.id,'fa')"/>
+        </div>
+        <div>
+            SOL: <input  id="checkBoxSol" type="checkbox" checked="true" onclick="hiddeNota(this.id,'sol')"/>
+        </div>
+        <div>
+            LA: <input  id="checkBoxLa" type="checkbox" checked="true" onclick="hiddeNota(this.id,'la')"/>
+        </div>
+        <div>
+            SI: <input  id="checkBoxSi" type="checkbox" checked="true" onclick="hiddeNota(this.id,'si')"/>
+        </div>
+        <div>
+            DO´: <input  id="checkBoxDo2" type="checkbox" checked="true" onclick="hiddeNota(this.id,'do2')"/>
+        </div>
+    </div>
+   <div class="mainContainer">
+        <div class="cajaXilofono">
+            <div id="do" class="nota notaDo" onclick="playSound('notaDo')">
+
+            </div>
+            <div id="re" class="nota notaRe" onclick="playSound('notaRe')">
+
+            </div>
+            <div id="mi" class="nota notaMi" onclick="playSound('notaMi')">
+
+            </div>
+            <div id="fa" class="nota notaFa" onclick="playSound('notaFa')">
+
+            </div>
+            <div id="sol" class="nota notaSol" onclick="playSound('notaSol')">
+
+            </div>
+            <div id="la" class="nota notaLa" onclick="playSound('notaLa')">
+
+            </div>
+            <div id="si" class="nota notaSi" onclick="playSound('notaSi')">
+
+            </div>
+            <div id="do2" class="nota notaDo2" onclick="playSound('notaDo2')">
+
+            </div>
+        </div>
+   </div>
+</body>
+<script>
+    function playSound(id_sonido) {   
+        var audio = document.getElementById(id_sonido);
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play();
+    }  
+    function hiddeNota(id_checkbox, id_nota) {
+        if(document.getElementById(id_checkbox).checked) {  
+            document.getElementById(id_nota).classList.remove('esconderNota');
+        } else {
+            document.getElementById(id_nota).classList.add('esconderNota');
+        }
+    }
+</script>
+</html>

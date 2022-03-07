@@ -1,0 +1,203 @@
+.html,
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+}
+
+.mainContainer {
+    height: 100%;
+    margin-top: 130px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaXilofono {
+    border: 2px solid black;
+    width: 760px;
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 36px 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: #937D53;
+    border-radius: 5px;
+    box-shadow: 5px 0px #756953,
+        5px 0px 0px 1px black;
+}
+
+.nota {
+    border: 2px solid black;
+    width: 70px;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    color:black;
+}
+
+.notaDo {
+    background-color: #DA1616;
+    height: 400px;
+    box-shadow: 5px 0px darkred,
+        5px 0px 0px 1px black;
+}
+
+.notaDo::after {
+    content: 'DO';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaDo:active {
+    background-color: #EA5454;
+}
+
+.notaRe {
+    background-color: #FF6C00;
+    height: 380px;
+    box-shadow: 5px 0px #AB5719,
+    5px 0px 0px 1px black;;
+}
+
+.notaRe::after {
+    content: 'RE';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaRe:active {
+    background-color: #FF9A50;
+}
+
+.notaMi {
+    background-color: #FFEB00;
+    height: 360px;
+    box-shadow: 5px 0px #ADA000,
+    5px 0px 0px 1px black;;
+}
+
+.notaMi::after {
+    content: 'MI';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaMi:active {
+    background-color: #FAF072;
+}
+
+.notaFa {
+    background-color: #49C500;
+    height: 340px;
+    box-shadow: 5px 0px #358E01,
+    5px 0px 0px 1px black;;
+}
+
+.notaFa::after {
+    content: 'FA';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaFa:active {
+    background-color: #77E537;
+}
+
+.notaSol {
+    background-color: #009AE5;
+    height: 320px;
+    box-shadow: 5px 2px #015D8A,
+    5px 0px 0px 1px black;;
+}
+
+.notaSol::after {
+    content: 'SOL';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaSol:active {
+    background-color: #59C2F5;
+}
+
+.notaLa {
+    background-color: #6C01A8;
+    height: 300px;
+    box-shadow: 5px 2px #40115A,
+    5px 0px 0px 1px black;;
+}
+
+.notaLa::after {
+    content: 'LA';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaLa:active {
+    background-color: #AE44E9;
+}
+
+.notaSi {
+    background-color: #FA74C3;
+    height: 280px;
+    box-shadow: 5px 2px #8F2A65,
+    5px 0px 0px 1px black;;
+}
+
+.notaSi::after {
+    content: 'SI';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaSi:active {
+    background-color: #FEB3DF;
+}
+
+.notaDo2 {
+    background-color: #DA1616;
+    height: 260px;
+    box-shadow: 5px 0px darkred,
+    5px 0px 0px 1px black;;
+}
+
+.notaDo2::after {
+    content: 'DO´';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaDo2:active {
+    background-color: #EA5454;
+}
+
+.divOpciones {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    border: 1px solid black;
+}
+
+.divOpciones div {
+    margin: 21px;
+    font-weight: bolder;
+}
+
+.esconderNota {
+    visibility: hidden;
+}
